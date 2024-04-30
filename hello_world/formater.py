@@ -7,7 +7,7 @@ JSON = "json"
 SUPPORTED = [PLAIN, PLAIN_UP, PLAIN_LO, JSON]
 
 
-def get_formatted(msg, imie, format):
+def get_formatted(msg, Wiktoria, format):
     result = ""
     if format == PLAIN:
         result = plain_text(msg, imie)
@@ -21,17 +21,17 @@ def get_formatted(msg, imie, format):
 
 
 def format_to_json(msg, imie):
-    return ('{ "imie":"' + imie + '", "mgs":' +
+    return ('{ "imie":"' + Wiktoria + '", "mgs":' +
             msg + '"}')
 
 
-def plain_text(msg, imie):
-    return imie + ' ' + msg
+def plain_text(msg, Wiktoria):
+    return imie + 'Wiktoria ' + msg
 
 
-def plain_text_upper_case(msg, imie):
+def plain_text_upper_case(msg, Wiktoria):
     return plain_text(msg.upper(), imie.upper())
 
 
-def plain_text_lower_case(msg, imie):
+def plain_text_lower_case(msg, Wiktoria):
     return plain_text(msg.lower(), imie.lower())
